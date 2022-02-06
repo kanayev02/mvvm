@@ -1,0 +1,20 @@
+﻿<Window x:Class="mvvm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mvvm"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <TextBox Name="pervoe" Text="{Binding PervoeChislo}"></TextBox>
+                <ComboBox Name="combo" ItemsSource="{Binding combo}" SelectedIndex="{Binding ComboIndex}"></ComboBox>
+                <TextBox Name="vtoroe" Text="{Binding VtoroeChislo}"></TextBox>
+            </StackPanel>
+            <Button Name="ravno" Width="75" Command="{Binding Command}">Равно</Button>
+            <TextBlock Name="Ravno" Text="{Binding RezultatChanged}"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
